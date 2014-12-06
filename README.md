@@ -1,5 +1,9 @@
 # Gomoku
 
+![screenshot](https://raw.githubusercontent.com/wojtekmach/gomoku/master/screenshot.png)
+
+## Running.
+
 To start your new Phoenix application:
 
 1. Install dependencies with `mix deps.get`

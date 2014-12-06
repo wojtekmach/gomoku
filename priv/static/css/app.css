@@ -1,17 +1,22 @@
+#board-container {
+  background-color: #fb6;
+  width: 100%;
+}
+
+#board {
+  position: relative;
+  width: 640px;
+  height: 640px;
+  padding: 40px;
+  margin: auto;
+}
+
 .table {
   width: 100%;
   height: 100%;
 }
 .table tbody tr td {
   border: 1px solid #000;
-}
-
-#board {
-  position: relative;
-  background-color: #fb6;
-  width: 640px;
-  height: 640px;
-  padding: 40px;
 }
 
 .circle {

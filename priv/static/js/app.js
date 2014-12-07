@@ -1,4 +1,8 @@
 $(function() {
+  var socket = new Phoenix.Socket("/ws");
+  socket.join("games", "default", {}, function(channel) {
+  });
+
   var i = 0;
   $("#clickable td").on("click", function() {
     i++;

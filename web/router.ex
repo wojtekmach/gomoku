@@ -1,5 +1,8 @@
 defmodule Gomoku.Router do
   use Phoenix.Router
+  use Phoenix.Router.Socket, mount: "/ws"
+
+  channel "game", Gomoku.GameChannel
 
   pipeline :browser do
     plug :accepts, ~w(html)

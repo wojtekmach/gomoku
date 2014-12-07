@@ -1,6 +1,9 @@
 $(function() {
+  var i = 0;
   $("#clickable td").on("click", function() {
-    console.log(this);
+    i++;
+    var color = (i % 2 == 0) ? 'black' : 'white';
+    $(this).html("<div class='circle " + color + "'></div>");
   });
 
   $("#clickable td[data-coords='0,0']").html("<div class='circle white'></div>");

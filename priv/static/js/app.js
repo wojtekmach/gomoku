@@ -1,6 +1,13 @@
 $(function() {
   var socket = new Phoenix.Socket("/ws");
-  socket.join("games", "default", {}, function(channel) {
+  socket.join("game", "topic", {}, function(channel) {
+    console.log("joined");
+
+    channel.on("pong", function(message) {
+      console.log("Got " + message);
+    });
+
+    channel.send("ping", {message: "hello"});
   });
 
   var i = 0;

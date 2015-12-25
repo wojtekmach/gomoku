@@ -2,6 +2,7 @@
   "name": "Gomoku",
   "description": "Gomoku game implemented in Elixir/Phoenix",
   "repository": "https://github.com/wojtekmach/gomoku",
+  "logo": "https://raw.githubusercontent.com/wojtekmach/gomoku/master/priv/static/images/logo.png",
   "buildpacks": [
     {"url": "https://github.com/HashNuke/heroku-buildpack-elixir"},
     {"url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static"}

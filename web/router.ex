@@ -1,26 +1,21 @@
 defmodule Gomoku.Router do
-  use Phoenix.Router
-  use Phoenix.Router.Socket, mount: "/ws"
-
-  channel "game", Gomoku.GameChannel
+  use Gomoku.Web, :router
 
   pipeline :browser do
-    plug :accepts, ~w(html)
+    plug :accepts, ["html"]
     plug :fetch_session
+    plug :fetch_flash
+    plug :protect_from_forgery
+    plug :put_secure_browser_headers
   end
 
   pipeline :api do
-    plug :accepts, ~w(json)
+    plug :accepts, ["json"]
   end
 
   scope "/", Gomoku do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", Gomoku do
-  #   pipe_through :api
-  # end
 end

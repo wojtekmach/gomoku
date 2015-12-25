@@ -1,7 +1,5 @@
 defmodule Gomoku.PageController do
-  use Phoenix.Controller
-
-  plug :action
+  use Gomoku.Web, :controller
 
   def index(conn, _params) do
     render conn, "index.html"

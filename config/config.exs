@@ -5,18 +5,14 @@
 # is restricted to this project.
 use Mix.Config
 
-# Configures the router
-config :phoenix, Gomoku.Router,
+# Configures the endpoint
+config :gomoku, Gomoku.Endpoint,
   url: [host: "localhost"],
-  http: [port: System.get_env("PORT")],
-  secret_key_base: "DVeyJISj0dpYdy/7zjKgOOgfgAcgc1k6Gg5d1xcR7e8OZdSVUQQdFR1n+0sU40rCh4IyZK6fAm+0wAkL8HjM9Q==",
-  debug_errors: false,
-  error_controller: Gomoku.PageController
-
-# Session configuration
-config :phoenix, Gomoku.Router,
-  session: [store: :cookie,
-            key: "_gomoku_key"]
+  root: Path.dirname(__DIR__),
+  secret_key_base: "/tJszp9pWHQaCNpL+Gkw7BmGZbvlz7Kc75v+W+LQr1qbnM3kd7jADsR72VpUobCO",
+  render_errors: [accepts: ~w(html json)],
+  pubsub: [name: Gomoku.PubSub,
+           adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -26,3 +22,9 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+# Configure phoenix generators
+config :phoenix, :generators,
+  migration: true,
+  binary_id: false
+

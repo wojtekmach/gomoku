@@ -21,7 +21,7 @@
         <h1>Gomoku</h1>
       </div>
 
-      <%= @inner %>
+      <%= render @view_module, @view_template, assigns %>
     </div>
   </body>
 </html>

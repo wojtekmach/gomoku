@@ -1,3 +1,3 @@
 defmodule Gomoku.PageView do
-  use Gomoku.View
+  use Gomoku.Web, :view
 end

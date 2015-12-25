@@ -1,3 +1,3 @@
 defmodule Gomoku.LayoutView do
-  use Gomoku.View
+  use Gomoku.Web, :view
 end

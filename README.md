@@ -1,5 +1,7 @@
 # Gomoku
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/wojtekmach/gomoku)
+
 ![phoenix](https://raw.githubusercontent.com/phoenixframework/media/master/badges/poweredby-phoenix-badge1-02.png)
 
 ![screenshot](https://raw.githubusercontent.com/wojtekmach/gomoku/master/screenshot.png)

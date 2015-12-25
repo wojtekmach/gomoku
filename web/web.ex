@@ -18,11 +18,11 @@ defmodule Gomoku.Web do
 
   def model do
     quote do
-      use Ecto.Schema
+      # use Ecto.Schema
 
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query, only: [from: 1, from: 2]
+      # import Ecto
+      # import Ecto.Changeset
+      # import Ecto.Query, only: [from: 1, from: 2]
     end
   end
 
@@ -31,8 +31,8 @@ defmodule Gomoku.Web do
       use Phoenix.Controller
 
       alias Gomoku.Repo
-      import Ecto
-      import Ecto.Query, only: [from: 1, from: 2]
+      # import Ecto
+      # import Ecto.Query, only: [from: 1, from: 2]
 
       import Gomoku.Router.Helpers
       import Gomoku.Gettext
@@ -66,8 +66,8 @@ defmodule Gomoku.Web do
       use Phoenix.Channel
 
       alias Gomoku.Repo
-      import Ecto
-      import Ecto.Query, only: [from: 1, from: 2]
+      # import Ecto
+      # import Ecto.Query, only: [from: 1, from: 2]
       import Gomoku.Gettext
     end
   end

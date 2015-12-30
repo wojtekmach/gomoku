@@ -24,12 +24,5 @@
 
       <%= render @view_module, @view_template, assigns %>
     </div>
-
-    <footer>
-      <div class="container">
-        <hr>
-        <a href="https://github.com/wojtekmach/gomoku" class="">See on GitHub</a>
-      </div>
-    </footer>
   </body>
 </html>

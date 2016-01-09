@@ -1,7 +1,9 @@
 defmodule GomokuTest do
-  use ExUnit.Case
+  use Gomoku.ConnCase
 
-  test "the truth" do
-    assert 1 + 1 == 2
+  test "GET /" do
+    conn = get conn, "/"
+    
+    assert html_response(conn, 200) =~ "Gomoku"
   end
 end
